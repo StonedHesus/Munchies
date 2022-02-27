@@ -1,6 +1,3 @@
-/* Google fonts imports. */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&display=swap');
-
 /* CSS which affects the overall aspect of the document commences here */
 *{
 
@@ -19,7 +16,7 @@ html {
 /* Ends here. */
 
 /* CSS for the section's authentication class commences here. */
-body section .authentication{
+body section .registration{
 
     background-color: #ffffff;
     display: inline-block;
@@ -34,22 +31,20 @@ body section .authentication{
     max-width: 32rem;
 }
 
-body section .authentication h1{
+body section .registration h1{
 
     font-size: 2.5rem;
     text-align: center;
     padding-bottom: 2.0rem;
     border-bottom: 0.1rem solid silver;
-
-    font-family: 'Oswald', sans-serif;
 }
 
-body section .authentication form{
+body section .registration form{
 
     margin: 1rem;
 }
 
-body section .authentication input{
+body section .registration input{
 
     width: 100%;
     margin-top: 2rem;
@@ -61,36 +56,30 @@ body section .authentication input{
     outline: none;
 }
 
-body section .authentication input:hover{
+body section .registration input:hover{
 
     border-bottom: 0.15rem solid rgba(148,187,233,1);
 }
 
-body section .authentication input::placeholder{
+body section .registration input::placeholder{
 
     color: rgb(163, 163, 163);
 }
 
-body section .authentication form a{
-
-    text-decoration: none;
-    cursor: pointer;
-}
-
-body section .authentication form p{
+body section .registration form p{
 
     font-size: 1.3rem;
     padding: 3rem 0.5rem 0 0;
     color: rgb(163, 163, 163);
 }
 
-body section .authentication form p:hover{
+body section .registration form p:hover{
 
     color: rgb(80 ,80, 80);
     cursor: pointer;
 }
 
-body section .authentication button[type="submit"]{
+body section .registration button[type="submit"]{
 
     display: block;
     margin: 2rem auto;
@@ -104,34 +93,15 @@ body section .authentication button[type="submit"]{
     font-weight: 200;
 }
 
-body section .authentication button[type="submit"]:hover{
+body section .registration button[type="submit"]:hover{
 
     cursor: pointer;
 }
-/* Ends here. */
 
-/* CSS for the section commences here.*/
-body section p{
+body section .registration a{
 
     text-align: center;
-    font-size: 1.3rem;
-}
-
-/* TODO: Properly remove the text decoration of the link. */
-
-body section p a{
-
     text-decoration: none;
-}
-
-body section p span{
-
-    color: rgba(148,187,233,1);
-    font-weight: 600;
-}
-
-body section p span:hover{
-
     cursor: pointer;
 }
 /* Ends here. */

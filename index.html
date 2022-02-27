@@ -9,31 +9,37 @@
 <body>
 
     <header>
-        <nav>
+        <div class="container">
+            <nav role="banner">
             <!--Might replace the h tag with an actual logo in the near future.-->
-            <h3><a href="#" id="brand">Munchies</a></h3>
+                <div class="brand">
+                    <h3><a href="./index.html">Munchies</a></h3>
+                </div>
 
-            <div>
-                <h3><a href="#">Our mission</a></h3>
-                <h3><a href="#">About Us</a></h3>
-                <h3><a href="#">Contact</a></h3>
-                <h3>|</h3>
-                <h3><a href="./pages/login.html">Log in</a></h3>
-                <h3><a href="#">Sign Up</a></h3>
-            </div>
-        </nav>
+                <ul>
+                    <li><a href="#">Our mission</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li role="separator">|</li>
+                    <li><a href="./pages/login.html">Log in</a></li>
+                    <li><a href="./pages/signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <div id="greeting-message-and-search-box">
+    <div id="greeting-message-and-search-box">
 
+        <div class="container">
             <h1>Welcome to Munchies!</h1>
 
             <form method="get">
                 <label for="queried-value">Tell us what you are looking for? </label>
                 <input name="queried-value" id="queried-value">
             </form>
-
         </div>
-    </header>
+
+    </div>
 
     <!--Our mission section commences here-->
     <section class="our-mission">
