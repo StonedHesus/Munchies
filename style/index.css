@@ -28,11 +28,12 @@ body header nav div {
 
     /*TODO: Make sure that no matter how much the page is upscaled or downscaled the
         distance to the right of the screen remains constant.*/
-    margin-left: 65%;
+    margin-left: 60%;
 
     display: flex;
     position: absolute;
 }
+
 
 /* CSS for the navbar ends here.*/
 
@@ -71,11 +72,15 @@ body .about-us .team-leader{
     text-align: center;
 }
 
+body .about-us #rest-of-the-team{
+
+
+    display: inline;
+    text-align: center;
+}
+
 body .about-us .team-member{
 
-    display: inline-grid;
-    text-align: center;
-    margin-left: 25%;
 
 }
 
