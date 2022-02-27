@@ -1,0 +1,17 @@
+@media(max-width:768px){
+
+    header{
+
+        height: 6rem;
+    }
+
+    header nav .desktop-menu{
+
+        display: none;
+    }
+
+    header nav .mobile-menu{
+
+        display: inline;
+    }
+}

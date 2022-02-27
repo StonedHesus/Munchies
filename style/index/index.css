@@ -1,10 +1,3 @@
-/* Variable declaration are done here.*/
-:root {
-    --green: #1ED760;
-    --gray: #919496;
-    --header-height: 80px;
-    --logo-height: 40px;
-}
 /* CSS which affects the whole document commences here.*/
 *{
 
@@ -18,54 +11,74 @@
 /* CSS for the navbar which is engendered in the header component. */
 
 
-body header nav{
+body header .container{
 
-    position:relative;
+    position: relative;
+    background: black;
+
     top: 0;
-
-    background: yellow;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    min-height: 54px;
+    width: 100%;
+    color:  white;
 }
 
-body header nav ul{
+body header .container nav{
 
-    display: flex;
-    height: 100%;
-    justify-content: space-around;
-    align-items: center;
+
 }
 
-body header nav li{
+body header .container nav ul{
 
+    display: flex;
+    margin-left: 75%;
+    margin-right: 5%;
+
+}
+
+body header .container nav ul li{
+
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
     list-style: none;
-    padding: 0 1.5rem;
-    font-size: 1.5rem;
-    font-weight: 600;
 }
 
-body header nav a{
+body header .container nav ul a{
 
+    color: white;
     text-decoration: none;
-    color: black;
 }
 
 body header nav a:hover{
 
-    color:whitesmoke;
+    color:  red;
     cursor: pointer;
 }
 
-body header nav div {
+body header nav .brand{
 
-    margin-left: 60%;
-
-    display: flex;
     position: absolute;
+    margin-left: 5%;
+    margin-top: 1.5rem;
+    color: pink;
 }
 
+body header nav .brand a{
+
+    color: white;
+    text-decoration: none;
+}
+
+body header .container nav .mobile-menu{
+
+    display: none;
+    align-self: center;
+}
+
+body header .container nav .mobile-menu img{
+
+    height: 25px;
+    width: 25px;
+}
 
 /* CSS for the navbar ends here.*/
 
