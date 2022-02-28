@@ -1,3 +1,11 @@
+/* CSS variables declaration commences here. */
+:root{
+
+    --header-height: 80px;
+}
+
+/* Ends here. */
+
 /* CSS which affects the whole document commences here.*/
 *{
 
@@ -7,9 +15,9 @@
 }
 /* Ends here.*/
 
+/* TODO: Properly implement the hamburger-menu for when the display reaches a size whose width is below 752px.*/
 
 /* CSS for the navbar which is engendered in the header component. */
-
 
 body header .container{
 
@@ -68,13 +76,14 @@ body header nav .brand a{
     text-decoration: none;
 }
 
-body header .container nav .mobile-menu{
+body header .container .mobile-menu{
 
     display: none;
     align-self: center;
+    color: white;
 }
 
-body header .container nav .mobile-menu img{
+body header .container .mobile-menu img{
 
     height: 25px;
     width: 25px;
