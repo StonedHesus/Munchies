@@ -10,11 +10,13 @@
 
     <link rel="stylesheet" href="./style/index/index.css" type="text/css">
     <link rel="stylesheet" href="./style/index/responsive.css" type="text/css">
+    <link rel="stylesheet" href="./style/index/animations.css" type="text/css">
 
+    <script src="https://kit.fontawesome.com/3ba5977250.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <header>
+    <header name="top">
         <div class="container">
             <nav role="banner" class="desktop-menu">
             <!--Might replace the h tag with an actual logo in the near future.-->
@@ -42,13 +44,16 @@
 
                 <form method="get">
                     <label for="queried-value">Tell us what you are looking for? </label>
-                    <input name="queried-value" id="queried-value">
+                    <input name="queried-value" id="queried-value" placeholder="Tell us what you are looking for!">
                 </form>
         </div>
     </header>
 
     <main>
 
+        <div class="back-top">
+            <a href="#top"><img src="https://img.icons8.com/material-outlined/100/000000/circled-up.png" alt="Upwards pointing arrow encircled in a black frame."/></a>
+        </div>
 
         <!--Our mission section commences here-->
         <section class="our-mission">
@@ -57,6 +62,49 @@
                 <h1>Our mission</h1>
                 <h3>Tantalising your senses and fulfilling all your culinary fantasies!</h3>
             </div>
+
+            <div class="our-mission-cards">
+                <div class="our-mission-cards-wrapper">
+
+                    <div class="our-mission-card">
+                        <img src="https://img.icons8.com/external-icongeek26-flat-icongeek26/64/000000/external-burger-food-and-delivery-icongeek26-flat-icongeek26.png" class="our-mission-card-image" alt="A representative image for this card.">
+                        <div class="our-mission-card-header">We are striving to facilitate business owners in need!</div>
+                        <div class="our-mission-card__content">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </div>
+                    </div>
+
+                    <div class="our-mission-card">
+                        <img src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/000000/external-cutlery-kindergarten-icongeek26-linear-colour-icongeek26.png" class="our-mission-card-image" alt="A representative image for this card.">
+                        <div class="our-mission-card-header">We are striving to facilitate business owners in need!</div>
+                        <div class="our-mission-card__content">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </div>
+                    </div>
+
+                    <div class="our-mission-card">
+                        <img src="https://img.icons8.com/external-febrian-hidayat-outline-color-febrian-hidayat/64/000000/external-apron-restaurant-febrian-hidayat-outline-color-febrian-hidayat.png" class="our-mission-card-image" alt="A representative image for this card.">
+                        <div class="our-mission-card-header">We are striving to facilitate business owners in need!</div>
+                        <div class="our-mission-card__content">
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
 
         </section>
         <!--Ends here.-->
@@ -69,11 +117,37 @@
             </div>
 
             <div class="team-leader">
-                <img src="./metadata/team/photographs%20/Andrei-Paul_Ionescu.png"
-                     alt="Image of Andrei-Paul Ionescu">
-                <h3>Andrei-Paul Ionescu</h3>
-                <p>Creator and developer of Munchies' technological framework.</p>
+                <div class="team-container">
+                    <div class="team-wrapper">
 
+                        <div class="team-member-photo">
+                            <img src="./metadata/team/photographs%20/Andrei-Paul_Ionescu.png"
+                                 alt="Image of Andrei-Paul Ionescu" >
+                        </div>
+
+                        <div class="team-member-details">
+                            <h3 class="team-member-name">Andrei-Paul Ionescu</h3>
+                            <p class="team-member-role">Creator and developer of Munchies' technological framework</p>
+                            <p class="team-member-description">A descriptive text is bound to go here.</p>
+
+                            <div class="team-member-contact">
+
+                                <ul class="team-member-contact__list">
+                                    <li class="team-member-contact__list__element">
+                                        <a class="team-member-contact__list__element__link"><i class="fa-brands fa-linkedin"></i></a>
+                                    </li>
+
+                                    <li class="team-member-contact__list__element">
+                                        <a class="team-member-contact__list__element__link"><i class="fa-solid fa-blog"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
 
             <div id="rest-of-the-team">
@@ -117,9 +191,52 @@
 
     <!--Footer of the page starts here-->
     <footer>
-        <p>
-            Copyright &copyAndrei-Paul Ionescu
-        </p>
+
+        <div class="social-media">
+            <div class="social-media-container">
+                <h6 class="social-media__prompt visible-xs">follow us!</h6>
+                <ul class="social-media__list">
+                    <li class="social-media__list__item">
+                        <a href="#" class="social-media__list__link"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+
+                    <li class="social-media__list__item">
+                        <a href="#" class="social-media__list__link"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+
+                    <li class="social-media__list__item">
+                        <a href="#" class="social-media__list__link"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+
+                    <li class="social-media__list__item">
+                        <a href="#" class="social-media__list__link"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <ul class="footer__list">
+                <li class="footer__list__item">
+                    <a href="#" class="footer__list__item__link">Contact</a>
+                </li>
+                <li class="footer__list__item">
+                    <a href="#" class="footer__list__item__link">FAQs</a>
+                </li>
+                <li class="footer__list__item">
+                    <a href="#" class="footer__list__item__link">Privacy</a>
+                </li>
+                <li class="footer__list__item">
+                    <a href="#" class="footer__list__item__link">Jobs</a>
+                </li>
+            </ul>
+
+            <p class="footer__copyright">
+                &copy 2022 Andrei-Paul Ionescu.
+                <br class="visible-xs">
+                All rights reserved.
+            </p>
+        </div>
     </footer>
     <!--Ends here.-->
 </body>
