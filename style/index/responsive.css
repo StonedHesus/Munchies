@@ -1,17 +1,17 @@
-@media(max-width:768px){
+/*@media(max-width:768px){*/
 
-    :root{
+/*    :root{*/
 
-        --header-height: 60px;
-    }
+/*        --header-height: 60px;*/
+/*    }*/
 
-    header nav .desktop-menu{
+/*    header nav .desktop-menu{*/
 
-        display: none;
-    }
+/*        display: none;*/
+/*    }*/
 
-    header nav .mobile-menu{
+/*    header nav .mobile-menu{*/
 
-        display: inline;
-    }
-}
+/*        display: inline;*/
+/*    }*/
+/*}*/

@@ -42,6 +42,7 @@ class User extends Person
     // Getter methods of the class.
     public function getUsername() {return $this->username;}
     public function getEmail() {return $this->email;}
+    public function getPassword() {return $this->password;}
 
     // Setter methods of the class.
     public function setPassword($password, $retypedPassword) {

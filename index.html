@@ -16,43 +16,80 @@
 </head>
 <body>
 
-    <header name="top">
-        <div class="container">
-            <nav role="banner" class="desktop-menu">
-            <!--Might replace the h tag with an actual logo in the near future.-->
-                <div class="brand">
-                    <h3><a href="./index.html">Munchies</a></h3>
+    <header>
+
+            <nav>
+                <div class="nav-container">
+                <!--Might replace the h tag with an actual logo in the near future.-->
+                    <div class="brand">
+                        <a href="./index.html" class="brand__link"><span class="brand__link__text">Munchies</span></a>
+                    </div>
+
+                    <div class="nav-links">
+                        <ul class="nav-links__list">
+                            <li class="nav-links__list__item"><a href="#" class="nav-links__list__item__link">Our mission</a></li>
+                            <li class="nav-links__list__item"><a href="#" class="nav-links__list__item__link">About Us</a></li>
+                            <li class="nav-links__list__item"><a href="#" class="nav-links__list__item__link">Contact</a></li>
+                            <li role="separator" class="nav-links__list__item">|</li>
+                            <li class="nav-links__list__item"><a href="./pages/login.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Log in</span></a></li>
+                            <li class="nav-links__list__item"><a href="./pages/signup.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Sign Up</span></a></li>
+                        </ul>
+                    </div>
+
                 </div>
-
-                <ul>
-                    <li><a href="#">Our mission</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li role="separator">|</li>
-                    <li><a href="./pages/login.html">Log in</a></li>
-                    <li><a href="./pages/signup.html">Sign Up</a></li>
-                </ul>
             </nav>
 
-            <nav class="mobile-menu">
-                <img src="./metadata/icons/hamburger-icon.png" alt="">
-            </nav>
-        </div>
 
         <div id="greeting-message-and-search-box">
-                <h1>Welcome to Munchies!</h1>
 
+            <div class="form-wrapper">
                 <form method="get">
-                    <label for="queried-value">Tell us what you are looking for? </label>
-                    <input name="queried-value" id="queried-value" placeholder="Tell us what you are looking for!">
-                </form>
+                    <fieldset>
+                        <legend>
+                           Welcome to Munchies! <br>
+                            Tell us what you are looking for?
+                        </legend>
+                    </fieldset>
+
+                    <div class="inner-form">
+
+                        <div class="input-field">
+                            <div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false" dir="ltr" role="">
+                                <div class="choices__inner">
+                                    <input class="form-control choices__input is-hidden" id="choices-text-preset-values"
+                                           type="text" placeholder="Type to search..." tabindex="-1" style="display:none;"
+                                           aria-hidden="true" data-choice="active" value="">
+
+                                    <div pseudo="placeholder">Type to search...</div>
+                                    <div contenteditable="plaintext-only"></div>
+
+                                    </input>
+                                </div>
+                                <div class="choices__list choices__list--dropdown" aria-expanded="false" role="">
+                                    <div class="choices__item choices__item--choice">
+                                    Press Enter to add <b>"="</b>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="btn-search" type="submit" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+                    </form>
+
+            </div>
         </div>
     </header>
 
     <main>
 
         <div class="back-top">
-            <a href="#top"><img src="https://img.icons8.com/material-outlined/100/000000/circled-up.png" alt="Upwards pointing arrow encircled in a black frame."/></a>
+            <a href="#"><img src="https://img.icons8.com/material-outlined/100/000000/circled-up.png" alt="Upwards pointing arrow encircled in a black frame."/></a>
         </div>
 
         <!--Our mission section commences here-->
@@ -151,18 +188,74 @@
             </div>
 
             <div id="rest-of-the-team">
-                <div class="team-member">
-                    <img alt="Image of Charley the imaginary coding ferret"
-                         src="./metadata/team/photographs%20/Charley.jpeg">
-                    <h3>Charley the coding ferret.</h3>
-                    <p>Support animal and child murderer.</p>
+
+
+                <div class="team-container">
+                    <div class="team-member">
+                        <div class="team-wrapper">
+
+
+                            <div class="team-member-photo">
+                                <img alt="Image of Charley the imaginary coding ferret"
+                                     src="./metadata/team/photographs%20/Charley.jpeg" class="team-member-image">
+                            </div>
+
+
+                            <div class="team-member-details">
+                                <h3 class="team-member-name">Charley the coding ferret.</h3>
+                                <p class="team-member-role">Support animal and child murderer.</p>
+
+                                <div class="team-member-contact">
+
+                                    <ul class="team-member-contact__list">
+                                        <li class="team-member-contact__list__element">
+                                            <a class="team-member-contact__list__element__link"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+
+                                        <li class="team-member-contact__list__element">
+                                            <a class="team-member-contact__list__element__link"><i class="fa-solid fa-blog"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
-                <div class="team-member">
-                    <img alt="Image of Lobotomy Craig the rapist and spare time psychiatrist."
-                         src="./metadata/team/photographs%20/Lobotomy.gif">
-                    <h3>Lobotomy Craig.</h3>
-                    <p>Less mental pain more spiritual gain.</p>
+                <div class="team-container">
+                    <div class="team-member">
+                        <div class="team-wrapper">
+
+
+                            <div class="team-member-photo">
+                                <img alt="Image of Lobotomy Craig the rapist and spare time psychiatrist."
+                                     src="./metadata/team/photographs%20/Lobotomy.gif" class="team-member-image">
+                            </div>
+
+
+                            <div class="team-member-details">
+                                <h3 class="team-member-name">Lobotomy Craig.</h3>
+                                <p class="team-member-role">Less mental pain more spiritual gain.</p>
+
+                                <div class="team-member-contact">
+
+                                    <ul class="team-member-contact__list">
+                                        <li class="team-member-contact__list__element">
+                                            <a class="team-member-contact__list__element__link"><i class="fa-brands fa-linkedin"></i></a>
+                                        </li>
+
+                                        <li class="team-member-contact__list__element">
+                                            <a class="team-member-contact__list__element__link"><i class="fa-solid fa-blog"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -172,16 +265,25 @@
         <!--Contact section starts here.-->
         <section class="contact">
 
-            <div id="contact-details">
-                <ul>
-                    <li>Address: xxxx</li>
-                    <li>Email: <a href="mailto:questions@munchies.eu">questions@munchies.eu</a></li>
-                    <li>Phone number: xxx-xxx-xxx</li>
-                </ul>
-            </div>
+            <h2 class="contact-section__header">Contact</h2>
 
-            <div id="map">
-                <img src="#" alt="To be replaced by an actual map pinpointing to the location of the headquarters of the brand.">
+            <div class="contact-container">
+
+                <div class="contact-details-wrapper">
+                    <div id="contact-details">
+                        <ul>
+                            <li>Address: xxxx</li>
+                            <li>Email: <a href="mailto:questions@munchies.eu">questions@munchies.eu</a></li>
+                            <li>Phone number: xxx-xxx-xxx</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="map-wrapper">
+                    <div id="map">
+                    </div>
+                </div>
+
             </div>
 
 
@@ -232,12 +334,19 @@
             </ul>
 
             <p class="footer__copyright">
-                &copy 2022 Andrei-Paul Ionescu.
+                &copy; 2022 Andrei-Paul Ionescu.
                 <br class="visible-xs">
                 All rights reserved.
             </p>
         </div>
     </footer>
     <!--Ends here.-->
+
+    <script src="./java-script/map.js"></script>
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuHyAErsxLbN_TOuyR_p1CZR0O5OL6Nw&callback=initMap&libraries=&v=weekly"
+            async
+    ></script>
+
 </body>
 </html>
