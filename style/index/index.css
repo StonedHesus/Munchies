@@ -6,11 +6,17 @@
     margin: 0;
 }
 
+a{
 
+    color: black;
+}
+
+a:hover{
+
+    color: #cccccc;
+}
 
 /* Ends here.*/
-
-/* TODO: Properly implement the hamburger-menu for when the display reaches a size whose width is below 752px.*/
 
 main{
 
@@ -23,13 +29,10 @@ main{
 
 .back-top{
 
-    position: absolute;
-
-    bottom: 50px;
-    right: 50px;
-    display: block;
+    display: inline-block;
     height: 100px;
     width: 100px;
+    margin-top:20px
 }
 
 
@@ -146,7 +149,7 @@ nav {
 
 /* CSS for the greetings portion of the header which also contains the search box. */
 
-body header #greeting-message-and-search-box{
+body header .greeting-message-and-search-box{
 
     padding: 15rem 0 0 0;
     width: 100%;
@@ -156,16 +159,6 @@ body header #greeting-message-and-search-box{
     background-size: 100%;
     background-position: 46% 4%;
     background-repeat: no-repeat;
-}
-
-body header #greeting-message-and-search-box  input{
-
-    border-radius: 50px;
-    width: 50%;
-    height: 50px;
-    display: block ruby;
-    margin-left: 25%;
-    margin-top: 40px;
 }
 
 .form-wrapper{
@@ -214,6 +207,32 @@ form legend {
     font-weight: 800;
     text-align: center;
     margin-bottom: 50px;
+}
+
+input{
+
+    writing-mode: horizontal-tb !important;
+
+    text-rendering: auto;
+    color: black;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: rgb(255, 255, 255);
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: rgb(118, 118, 118);
+    border-image: initial;
 }
 
 .inner-form{
@@ -335,6 +354,7 @@ b{
     margin-bottom: 0;
 }
 
+
 .choices[data-type*="select-multiple"] .choices__inner, .choices[data-type*="text"] .choices__inner {
 
     cursor: text;
@@ -364,6 +384,29 @@ b{
     border-radius: 0;
     max-width: 100%;
     padding: 4px 0 4px 2px;
+}
+
+.choices__list--multiple {
+
+    display: inline;
+}
+
+.suggestion-wrap{
+
+    padding: 0 15px;
+}
+
+.suggestion-wrap span{
+
+    font-size:14px;
+    font-family:helvetica,sans-serif;
+    display:inline-block;
+    padding:0 15px;
+    line-height:32px;
+    color:#fff;
+    border-radius:16px;
+    margin-right:10px;
+    margin-bottom:10px
 }
 
 button, input {
@@ -531,16 +574,27 @@ body .team-container{
 
     box-shadow: 0px 10px 16px -8px rgba(0,0,0,0.2);
     margin-bottom: 5rem;
-    margin-left: 10rem;
     width: 600px;
     border-radius: 20px;
     background: white;
+}
+
+body .team-container-chained-first{
+
+    margin-left: 5%;
+}
+
+body .team-container-chained-last{
+
+
+    margin-right: 5%;
 }
 
 body .team-wrapper{
 
 
     display: inline-flex;
+    width: 600px;
 }
 
 body .team-member-photo{
@@ -575,7 +629,7 @@ body .team-member-description{
 body .team-member-contact__list{
 
     display: flex;
-    margin-left: 10rem;
+    margin-left: 120px;
     margin-top: 20px;
 }
 
@@ -585,7 +639,10 @@ body .team-member-contact__list__element{
 
     margin-left: 20px;
 }
+body .team-member-contact__list__element__link{
 
+    color: #000000;
+}
 body .team-member-contact__list__element__link:hover{
 
     color: #cccccc;
@@ -596,7 +653,8 @@ body .about-us .team-leader{
 
     text-align: center;
     width: 600px;
-    margin-left: 42rem;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 100px;
 }
 
@@ -611,10 +669,12 @@ body .about-us .team-leader img{
 
 body .about-us #rest-of-the-team{
 
-    margin-left: 20%;
-    margin-right: 20%;
     display: flex;
     text-align: center;
+    justify-content: space-between;
+
+    margin-right: auto;
+    margin-left: auto;
 }
 
 body .about-us .team-member{
@@ -639,7 +699,7 @@ body .contact{
 
 .contact .contact-section__header{
 
-    margin-left: 50%;
+    text-align: center;
     font-size: 50px;
     font-weight: 600;
 
@@ -688,9 +748,13 @@ body footer{
 }
 
 
+footer .social-media{
+
+    display: inline-block;
+}
+
 footer .social-media-container{
 
-    margin-left: 50%;
     text-align: center;
 }
 

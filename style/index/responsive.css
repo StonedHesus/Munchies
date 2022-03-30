@@ -1,17 +1,25 @@
-/*@media(max-width:768px){*/
+@media (max-width: 480px){
 
-/*    :root{*/
 
-/*        --header-height: 60px;*/
-/*    }*/
+    .nav-links .nav-links__list__item__link__button{
 
-/*    header nav .desktop-menu{*/
+        display: flex;
+    }
 
-/*        display: none;*/
-/*    }*/
+}
 
-/*    header nav .mobile-menu{*/
+@media (min-width: 481px) and (max-width: 768px){
 
-/*        display: inline;*/
-/*    }*/
-/*}*/
+    .nav-links .nav-links__list__item__link__button{
+
+        display: flex;
+    }
+
+
+}
+
+@media (min-width: 769px) and (max-width: 1279px){
+
+
+
+}

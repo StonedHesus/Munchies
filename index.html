@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <header>
+    <header id="anchor_top">
 
             <nav>
                 <div class="nav-container">
@@ -27,9 +27,9 @@
 
                     <div class="nav-links">
                         <ul class="nav-links__list">
-                            <li class="nav-links__list__item"><a href="#" class="nav-links__list__item__link">Our mission</a></li>
-                            <li class="nav-links__list__item"><a href="#" class="nav-links__list__item__link">About Us</a></li>
-                            <li class="nav-links__list__item"><a href="#" class="nav-links__list__item__link">Contact</a></li>
+                            <li class="nav-links__list__item"><a href="#anchor_our-mission" class="nav-links__list__item__link">Our mission</a></li>
+                            <li class="nav-links__list__item"><a href="#anchor_about-us" class="nav-links__list__item__link">About Us</a></li>
+                            <li class="nav-links__list__item"><a href="#anchor_contact" class="nav-links__list__item__link">Contact</a></li>
                             <li role="separator" class="nav-links__list__item">|</li>
                             <li class="nav-links__list__item"><a href="./pages/login.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Log in</span></a></li>
                             <li class="nav-links__list__item"><a href="./pages/signup.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Sign Up</span></a></li>
@@ -40,7 +40,7 @@
             </nav>
 
 
-        <div id="greeting-message-and-search-box">
+        <div class="greeting-message-and-search-box">
 
             <div class="form-wrapper">
                 <form method="get">
@@ -49,7 +49,7 @@
                            Welcome to Munchies! <br>
                             Tell us what you are looking for?
                         </legend>
-                    </fieldset>
+
 
                     <div class="inner-form">
 
@@ -57,22 +57,24 @@
                             <div class="choices" data-type="text" aria-haspopup="true" aria-expanded="false" dir="ltr" role="">
                                 <div class="choices__inner">
                                     <input class="form-control choices__input is-hidden" id="choices-text-preset-values"
-                                           type="text" placeholder="Type to search..." tabindex="-1" style="display:none;"
-                                           aria-hidden="true" data-choice="active" value="">
+                                           type="text" placeholder="Type to search..."
+                                           tabindex="-1" style="display:none;" aria-hidden="true"
+                                           data-choice="active" value="">
+                                    <div class="choices__list choices__list--multiple"></div>
+                                    <input type="text" class="choices__input choices__input--cloned" autocomplete="off"
+                                           autocapitalize="off" spellcheck="false" role="textbox"
+                                           aria-autocomplete="list"
+                                           placeholder="Type to search..." style="width: 109px;" name="query">
 
-                                    <div pseudo="placeholder">Type to search...</div>
-                                    <div contenteditable="plaintext-only"></div>
-
-                                    </input>
                                 </div>
                                 <div class="choices__list choices__list--dropdown" aria-expanded="false" role="">
                                     <div class="choices__item choices__item--choice">
-                                    Press Enter to add <b>"="</b>
+                                    Press Enter to add <b></b>
                                     </div>
                                 </div>
                             </div>
 
-                            <button class="btn-search" type="submit" >
+                            <button class="btn-search" type="submit">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                                     <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
                                 </svg>
@@ -80,6 +82,16 @@
                         </div>
 
                     </div>
+
+                    <div class="suggestion-wrap">
+                        <span>Paris</span>
+                        <span>Lyon</span>
+                        <span>Strasbourg</span>
+                        <span>Nantes</span>
+                        <span>Toulouse</span>
+                    </div>
+
+                        </fieldset>
                     </form>
 
             </div>
@@ -88,12 +100,8 @@
 
     <main>
 
-        <div class="back-top">
-            <a href="#"><img src="https://img.icons8.com/material-outlined/100/000000/circled-up.png" alt="Upwards pointing arrow encircled in a black frame."/></a>
-        </div>
-
         <!--Our mission section commences here-->
-        <section class="our-mission">
+        <section class="our-mission" id="anchor_our-mission">
 
             <div class="section-header">
                 <h1>Our mission</h1>
@@ -147,7 +155,7 @@
         <!--Ends here.-->
 
         <!--About us section starts here.-->
-        <section class="about-us">
+        <section class="about-us" id="anchor_about-us">
 
             <div id="section-prompt">
                 <h1>Meet the people behind Munchies!</h1>
@@ -171,11 +179,15 @@
 
                                 <ul class="team-member-contact__list">
                                     <li class="team-member-contact__list__element">
-                                        <a class="team-member-contact__list__element__link"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a class="team-member-contact__list__element__link"
+                                           href="https://www.linkedin.com/in/andrei-paul-ionescu-545a3b200/">
+                                            <i class="fa-brands fa-linkedin"></i></a>
                                     </li>
 
                                     <li class="team-member-contact__list__element">
-                                        <a class="team-member-contact__list__element__link"><i class="fa-solid fa-blog"></i></a>
+                                        <a class="team-member-contact__list__element__link"
+                                           href="https://stonedhesus.github.io/">
+                                            <i class="fa-solid fa-blog"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -190,7 +202,7 @@
             <div id="rest-of-the-team">
 
 
-                <div class="team-container">
+                <div class="team-container team-container-chained-first">
                     <div class="team-member">
                         <div class="team-wrapper">
 
@@ -224,7 +236,7 @@
                     </div>
                 </div>
 
-                <div class="team-container">
+                <div class="team-container team-container-chained-last">
                     <div class="team-member">
                         <div class="team-wrapper">
 
@@ -257,13 +269,15 @@
                         </div>
                     </div>
                 </div>
+
+
             </div>
 
         </section>
         <!--Ends here.-->
 
         <!--Contact section starts here.-->
-        <section class="contact">
+        <section class="contact" id="anchor_contact">
 
             <h2 class="contact-section__header">Contact</h2>
 
@@ -294,6 +308,10 @@
     <!--Footer of the page starts here-->
     <footer>
 
+        <div class="back-top">
+            <a href="#anchor_top" data-smooth-scroll><i class="fa fa-circle-arrow-up"></i></a>
+        </div>
+        <br/>
         <div class="social-media">
             <div class="social-media-container">
                 <h6 class="social-media__prompt visible-xs">follow us!</h6>
@@ -342,11 +360,30 @@
     </footer>
     <!--Ends here.-->
 
+    <script src="./java-script/dynamic-background.js"></script>
     <script src="./java-script/map.js"></script>
     <script
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBuHyAErsxLbN_TOuyR_p1CZR0O5OL6Nw&callback=initMap&libraries=&v=weekly"
             async
     ></script>
 
+    <script src="java-script/choices.js"></script>
+    <script>
+        var textPresetVal = new Choices('#choices-text-preset-values',
+            {
+                removeItemButton: true,
+            });
+
+    </script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+
+    </script>
 </body>
 </html>
