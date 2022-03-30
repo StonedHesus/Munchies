@@ -56,6 +56,11 @@ nav {
     list-style: none;
 }
 
+.brand{
+
+    transform: translate(-220%, 95%);
+}
+
 .brand__link{
 
 
@@ -707,9 +712,10 @@ body .contact{
 
 .contact .contact-container{
 
+    margin-top: 12.5%;
     display: flex;
     margin-left: 3rem;
-    margin-top: 2rem;
+
 }
 
 body .contact #contact-details ul{
@@ -817,3 +823,28 @@ footer .footer__list__item__link:hover{
 
 
 /* CSS for the footer portion of the page ends here. */
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: rgb(238,174,202);
+    cursor: pointer;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(238,174,202);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
