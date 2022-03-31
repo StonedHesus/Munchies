@@ -1,5 +1,8 @@
 <?php
 
+include_once "Person.php";
+include_once "Database.php";
+
 
 class User extends Person
 {
@@ -53,6 +56,32 @@ class User extends Person
     }
 
     // Methods of the class.
+    public static function numberOfUsers(){
+
+        $database = new Database();
+
+        $result = $database->queryDatabase("SELECT * FROM Users");
+
+       return $result->rowCount();
+    }
+    public static function deleteUser($username){
+
+        $database = new Database();
+        $database->deleteUser($username);
+    }
+    public static function getAllUsers(){
+
+        $database = new Database();
+        return $database->queryDatabase("Select * FROM Users ");
+    }
+
+    public static function getPanelName() {return "Users";}
+
+    public static function getFieldsName(){
+
+        return ['Firstname', 'Lastname', 'Username', 'Email'];
+    }
+
     private function checkPasswordEquality($password, $retypedPassword){
 
         if($password === $retypedPassword){

@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = $_POST['password'];
 
 
-   header('Location: http://localhost:8888/index.html');
+   header('Location: http://localhost:8888/admin.php');
 }
 
 //exit();
