@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     try {
 
-        $data_base = new PDO("mysql:host=localhost;dbname=Munchies", "root", "");;
+        $data_base = new PDO("mysql:host=localhost;dbname=munchies", "root", "");;
     } catch(PDOException $exception) {
 
         echo "Connection failed: " . $exception->getMessage();
@@ -49,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
-//        header('Location: http://localhost:8888/index.html');
+        //header('Location: http://localhost:8888/index.html');
 } else{
 
     echo("<h1 style='text-align: center;'>Welcome to the Munchies' family!</h1>");

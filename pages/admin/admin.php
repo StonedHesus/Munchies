@@ -24,6 +24,9 @@
 
     <!-- Theme style -->
     <link rel="stylesheet" href="./../../style/admin/adminlte.min.css">
+
+    <!-- Customs style -->
+    <link rel="stylesheet" href="./../../style/admin/admin.css" type="text/css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 
@@ -42,7 +45,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">Home</a>
+            <a href=./../../index.html class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
@@ -144,7 +147,7 @@
                             <p>Restaurants</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-bag"></i>
+                            <i class="ion ion-fork"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -156,10 +159,10 @@
                         <div class="inner">
                             <h3><?php echo $numberOfUsers ?></h3>
 
-                            <p>Users</p>
+                            <p>Cities</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
+                            <i class="ion ion-location"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
@@ -171,30 +174,14 @@
                         <div class="inner">
                             <h3><?php echo $numberOfCities ?></h3>
 
-                            <p>Cities</p>
+                            <p>Users</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-person-add"></i>
+                            <i class="ion ion-person"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-danger">
-                        <div class="inner">
-                            <h3><?php echo $otherValue ?></h3>
-
-                            <p>Unique Visitors</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-pie-graph"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
             </div>
             <!-- /.row -->
 

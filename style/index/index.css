@@ -730,7 +730,10 @@ body .contact #contact-details ul{
 
 #map{
 
-    margin-left: 50rem;
+
+    transform: translate(-10%, -70%);
+    position: absolute;
+    right: 0;
     height: 400px;
     width: 400px;
 }

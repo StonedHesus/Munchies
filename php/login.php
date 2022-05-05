@@ -7,7 +7,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     echo "<h1>My first query.</h1>";
     try{
 
-        $data_base = new PDO("mysql:host=localhost;dbname=Munchies", "root", "");
+        $data_base = new PDO("mysql:host=localhost;dbname=munchies", "root", "");
         echo "<p>Connected successfully</p>";
         $data_base->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch(PDOException $error){

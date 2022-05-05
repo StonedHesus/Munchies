@@ -60,7 +60,7 @@ class User extends Person
 
         $database = new Database();
 
-        $result = $database->queryDatabase("SELECT * FROM Users");
+        $result = $database->queryDatabase("SELECT * FROM users");
 
        return $result->rowCount();
     }
@@ -72,7 +72,7 @@ class User extends Person
     public static function getAllUsers(){
 
         $database = new Database();
-        return $database->queryDatabase("Select * FROM Users ");
+        return $database->queryDatabase("Select * FROM users ");
     }
 
     public static function getPanelName() {return "Users";}

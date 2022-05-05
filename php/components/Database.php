@@ -5,7 +5,7 @@ class Database extends PDO{
     // Attributes of the class.
 
     // Constructors of the class.
-    public function __construct($dsn = "mysql:host=localhost;dbname=Munchies"
+    public function __construct($dsn = "mysql:host=localhost;dbname=munchies"
         , $username = "root", $password = "", $options = null)
     {
         parent::__construct($dsn, $username, $password, $options);
