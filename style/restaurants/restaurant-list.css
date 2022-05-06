@@ -1,0 +1,229 @@
+html{
+
+    width:  100%;
+}
+/* CSS for the navbar which is engendered in the header component. */
+
+nav {
+    height: 70px;
+    width: 100%;
+    background-color: whitesmoke;
+    align-items:center;
+}
+
+.nav-links{
+
+    margin-left: 70%;
+}
+
+.nav-links .nav-links__list{
+
+    display: flex;
+    list-style: none;
+}
+
+.brand{
+
+    transform: translate(-220%, 95%);
+}
+
+.brand__link{
+
+
+    padding: 10px;
+    background: black;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.brand__link:hover{
+
+    background: #cccccc;
+}
+
+.brand__link__text{
+
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.nav-links .nav-links__list__item{
+
+    margin-left: 10px;
+}
+
+.nav-links .nav-links__list__item__link{
+
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-links .nav-links__list__item__link:hover{
+
+    text-decoration: none;
+    color: #cccccc;
+}
+
+.nav-links .nav-links__list__item__link__button{
+
+    box-sizing: border-box;
+
+    padding: 10px;
+    background: black;
+
+    border-radius: 20px;
+}
+
+.nav-links .nav-links__list__item__link__button:hover{
+
+    background: #cccccc;
+}
+
+
+.nav-links .nav-links__list__item__link__button__text{
+
+    color: white;
+}
+
+/*nav a{*/
+
+/*    color: black;*/
+/*    display: inline-block;*/
+/*    padding: 13px 10px 13px 10px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*body .container{*/
+
+/*    display: inline;*/
+/*}*/
+
+/*body .container .brand{*/
+
+/*    display: inline-block;*/
+/*    font-size: 22px;*/
+/*    color: #fff;*/
+/*    padding: 10px 10px 10px 10px;*/
+/*}*/
+
+/*body .container ul{*/
+
+/*    list-style: none;*/
+/*    display: inline;*/
+/*    float: right;*/
+/*    font-size: 18px;*/
+/*}*/
+
+
+/* CSS for the navbar ends here.*/
+
+/* CSS for the prompt section commences here. */
+
+.prompt-centre{
+
+    text-align: center;
+}
+
+.prompt-header{
+
+    margin-top: 2.5%;
+}
+
+.searched-value{
+
+    margin-top: 2.5%;
+    color: #cccccc;
+}
+
+/* CSS for the prompt section ends here. */
+
+/* CSS for the footer portion of the page. */
+
+body footer{
+
+    display: block;
+    padding: 0 0 2.5rem 0;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    text-align: center;
+}
+
+
+footer .social-media{
+
+    display: inline-block;
+}
+
+footer .social-media-container{
+
+    text-align: center;
+}
+
+footer .social-media__list{
+
+    display: flex;
+}
+
+footer .social-media__list__item{
+
+    margin: 5px 10px 5px 10px;
+    list-style: none;
+}
+
+footer .social-media__list__link{
+
+    text-decoration: none;
+    color: #000000;
+}
+
+i{
+    font-size: 30px;
+}
+
+footer .social-media__list__link:hover{
+
+    text-decoration: none;
+    color: #cccccc;
+}
+
+footer .footer__list{
+
+    padding-left: 0;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 11px;
+}
+
+footer .footer__list__item{
+
+    display: inline-block;
+    padding: 0 5px;
+}
+
+footer .footer__list__item__link{
+
+    color: black;
+    font-size: 1.2rem;
+    line-height: 1.563rem;
+    font-weight: bold;
+    font-style: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer .footer__list__item__link:hover{
+
+    color: saddlebrown;
+}
+
+
+/* CSS for the footer portion of the page ends here. */
+
+/* CSS for the results commences here. */
+
+.wrapper{
+
+    border: solid 3px black;
+}
+/* CSS for the results ends here.*/
