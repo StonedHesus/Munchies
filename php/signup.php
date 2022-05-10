@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         echo "Connection failed: " . $exception->getMessage();
     }
 
-    $insert_sql = $data_base->prepare("INSERT INTO users (firstName, lastName, username, email, password) VALUES (:firstName, :lastName, :username, :email, :password)");
+    $insert_sql = $data_base->prepare("INSERT INTO users (firstName, lastName, username, email, password, role) VALUES (:firstName, :lastName, :username, :email, :password, :role)");
 
     $firstName = $temporary->getFirstName();
     $insert_sql->bindParam(':firstName', $firstName);
@@ -31,6 +31,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $insert_sql->bindParam(':email', $email);
     $password1 = $temporary->getPassword();
     $insert_sql->bindParam(':password', $password1);
+    $role = "user";
+    $insert_sql->bindParam(':role', $role);
+
 
     $insert_sql->execute();
 
