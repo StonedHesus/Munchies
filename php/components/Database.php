@@ -1,5 +1,5 @@
 <?php
-class Database extends PDO{
+class Database extends PDO implements Configuration{
 
 
     // Attributes of the class.
