@@ -81,7 +81,7 @@
                                     <input class="form-control choices__input is-hidden" id="choices-text-preset-values"
                                            type="text" placeholder="Type to search..."
                                            tabindex="-1" style="display:none;" aria-hidden="true"
-                                           data-choice="active" value="" name="query">
+                                           data-choice="active" value="" name="query[]">
                                     <div class="choices__list choices__list--multiple"></div>
                                     <input type="text" class="choices__input choices__input--cloned" autocomplete="off"
                                            autocapitalize="off" spellcheck="false" role="textbox"

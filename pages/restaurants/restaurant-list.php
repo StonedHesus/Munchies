@@ -9,11 +9,17 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom CSS for the page. -->
+
     <link rel="stylesheet" href="./../../style/restaurants/restaurant-list.css" type="text/css">
+
+    <script src="https://kit.fontawesome.com/3ba5977250.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<? //$queryResults = Database::query("") ?>
+<?
+session_start();
+if(isset($_SESSION['loggedin']) == false) $_SESSION['loggedin'] = false;
+?>
 
 <header id="anchor_top">
 
@@ -24,7 +30,7 @@
 
             <div class="nav-links">
                 <div class="brand">
-                    <a href="./index.html" class="brand__link"><span class="brand__link__text">Munchies</span></a>
+                    <a href="./../../index.php" class="brand__link"><span class="brand__link__text">Munchies</span></a>
                 </div>
                 <ul class="nav-links__list">
                     <li class="nav-links__list__item">
@@ -37,8 +43,19 @@
                         <a href="#anchor_contact" class="nav-links__list__item__link hover-underline-animation">
                             Contact</a></li>
                     <li role="separator" class="nav-links__list__item">|</li>
-                    <li class="nav-links__list__item"><a href="./pages/login.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Log in</span></a></li>
-                    <li class="nav-links__list__item"><a href="./pages/signup.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Sign Up</span></a></li>
+                    <?
+                    if($_SESSION['loggedin'] == false){
+
+                        echo '<li class="nav-links__list__item"><a href="./../../pages/login.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Log in</span></a></li>';
+                        echo '<li class="nav-links__list__item"><a href="./../../pages/signup.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Sign Up</span></a></li>';
+
+                    } else{
+
+                        echo '<li class="nav-links__list__item"><span>Welcome </span><a href="./../../pages/user-profile.php" class=""><span class="">check your profile here.</span></a></li>';
+                        echo '<li class="nav-links__list__item"><span><a href="./../../php/logout.php">Log out</a></span></li>';
+                    }
+
+                    ?>
                 </ul>
             </div>
 
@@ -66,6 +83,10 @@
 
 <!--Footer of the page starts here-->
 <footer>
+
+    <div class="back-top">
+        <a href="#anchor_top" data-smooth-scroll><i class="fa fa-circle-arrow-up"></i></a>
+    </div>
 
     <div class="back-top">
         <a href="#anchor_top" data-smooth-scroll><i class="fa fa-circle-arrow-up"></i></a>

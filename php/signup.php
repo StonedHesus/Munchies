@@ -2,6 +2,8 @@
 
 include './components/User.php';
 
+session_start();
+
 $firstname = $lastname = $mail = $password = "";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -45,17 +47,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $result = $data_base->query($sql);
 
-    if ($result->rowCount() > 0) {
-        // output data of each row
-        while($row = $result->fetch()) {
-            echo "Username: " . $row['username'] . " | Password: " . $row['password'] ."\n";
-        }
-    }
+    $_SESSION['loggedin'] = true;
+    $_SESSION['username'] = $username;
+    $_SESSION['firstName'] = $firstName;
+    $_SESSION['lastName'] = $lastName;
 
-        //header('Location: http://localhost:8888/index.html');
+    header('location: http://localhost/Munchies/index.php');
+
 } else{
 
-    echo("<h1 style='text-align: center;'>Welcome to the Munchies' family!</h1>");
+    header('location: http://localhost/Munchies/pages/error-page/error.html');
 }
 //}
 
