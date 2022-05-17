@@ -12,6 +12,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
     <title>Munchies | Admin's Landing Page</title>
 
 
@@ -45,7 +48,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href=./../../index.html class="nav-link">Home</a>
+            <a href=../../index.php class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
@@ -57,7 +60,7 @@
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="./../../index.html" class="brand-link" style="text-align: center;">
+    <a href="../../index.php" class="brand-link" style="text-align: center;">
         <span class="brand-text font-weight-light">Munchies</span>
     </a>
 

@@ -4,7 +4,7 @@ session_start();
 
 // Check if the user is already logged in, if that is the case then redirect him to the main page.
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location:  http://localhost:8888/index.html'");
+    header("location: http://localhost/munchies");
     exit;
 }
 
@@ -53,18 +53,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 // matches or not.
                 if($statement->rowCount() == 1){
 
+
                     if($row = $statement->fetch()){
 
                         $id = $row["id"];
                         $username = $row["username"];
                         $hashed_password = $row["password"];
 
-                        if(password_verify($password, $hashed_password)){
+                        //if(password_verify($password, $hashed_password)){
+                        if($password == $hashed_password){
                             // Password is correct, so initialise a new session and redirect the user.
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            header("location:  http://localhost:8888/index.html'");
+//                            $_SESSION['current'] = new User($row['firstName'], $row['lastName'], $row['username'],
+//                                $row['email'], $row['password']);
+                            $_SESSION['firstName'] = $row['firstName'];
+                            header("location:  http://localhost/munchies");
                         } else {
 
                             $login_error = "Invalid name or username";
@@ -85,6 +90,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         unset($data_base);
 
     }
+} else{
+
+    header("location:  http://localhost/munchies/pages/error-page/error.html");
 }
 
 //exit();

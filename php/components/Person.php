@@ -25,6 +25,7 @@ class Person
     }
 
     // Getter methods of the class.
+    public function getFullName() {return $this->firstName.$this->lastName;}
     public function getFirstName() {return $this->firstName;}
     public function getLastName() {return $this->lastName;}
 

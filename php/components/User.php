@@ -33,6 +33,7 @@ class User extends Person
     private $password;
 
     // Constructors of the class.
+
     public function __construct($firstName, $lastName, $username, $email, $password){
 
         parent::__construct($firstName, $lastName);
