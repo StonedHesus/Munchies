@@ -33,6 +33,11 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 
+<?
+session_start();
+if(isset($_SESSION['loggedin']) == false) $_SESSION['loggedin'] = false;
+?>
+
 <!-- Preloader
 <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src="./../../metadata/icons/food.png" alt="Munchies's logo" height="60" width="60">
@@ -69,7 +74,14 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="info">
-                <a href="#" class="d-block">Alexander Pierce</a>
+                <? if($_SESSION['loggedin'] == true){
+
+                    $fullName = $_SESSION['firstName']. ' ' . $_SESSION['lastName'];
+                    print<<<END
+                    <a href="#" class="d-block">$fullName</a>
+END;
+                }?>
+
             </div>
         </div>
 
@@ -160,7 +172,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3><?php echo $numberOfUsers ?></h3>
+                            <h3><?php echo $numberOfCities ?></h3>
 
                             <p>Cities</p>
                         </div>
@@ -175,14 +187,14 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3><?php echo $numberOfCities ?></h3>
+                            <h3><?php echo $numberOfUsers ?></h3>
 
                             <p>Users</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="./crud.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
