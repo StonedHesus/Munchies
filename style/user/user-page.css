@@ -4,3 +4,23 @@ footer{
     bottom: 0;
     width: 100%;
 }
+
+.centred{
+
+    text-align: center;
+}
+
+.greeting-message{
+
+    margin-top: 4%;
+}
+
+.prompt{
+
+    margin-top: 4%;
+}
+
+.actions{
+
+    margin-top: 4%;
+}

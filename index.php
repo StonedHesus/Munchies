@@ -237,7 +237,7 @@
 
                             <div class="team-member-details">
                                 <h3 class="team-member-name">Charley the coding ferret.</h3>
-                                <p class="team-member-role">Support animal and child murderer.</p>
+                                <p class="team-member-role">Support animal and probationary firefighter.</p>
 
                                 <div class="team-member-contact">
 

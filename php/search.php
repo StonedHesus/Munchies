@@ -10,10 +10,15 @@
 
     <!-- Custom CSS for the page. -->
     <link rel="stylesheet" href="./../style/restaurants/restaurant-list.css" type="text/css">
+    <link rel="stylesheet" href="./../style/components/search.css">
 </head>
 <body>
 
-<? //$queryResults = Database::query("") ?>
+<?
+session_start();
+if(isset($_SESSION['loggedin']) == false) $_SESSION['loggedin'] = false;
+?>
+
 
 <header id="anchor_top">
 
@@ -37,8 +42,19 @@
                         <a href="#anchor_contact" class="nav-links__list__item__link hover-underline-animation">
                             Contact</a></li>
                     <li role="separator" class="nav-links__list__item">|</li>
-                    <li class="nav-links__list__item"><a href="./pages/login.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Log in</span></a></li>
-                    <li class="nav-links__list__item"><a href="./pages/signup.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Sign Up</span></a></li>
+                    <?
+                    if($_SESSION['loggedin'] == false){
+
+                        echo '<li class="nav-links__list__item"><a href="./../pages/login.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Log in</span></a></li>';
+                        echo '<li class="nav-links__list__item"><a href="./../pages/signup.html" class="nav-links__list__item__link nav-links__list__item__link__button"><span class="nav-links__list__item__link__button__text">Sign Up</span></a></li>';
+
+                    } else{
+
+                        echo '<li class="nav-links__list__item"><span>Welcome </span><a href="./../pages/user-profile.php" class=""><span class="">check your profile here.</span></a></li>';
+                        echo '<li class="nav-links__list__item"><span><a href="./../php/logout.php">Log out</a></span></li>';
+                    }
+
+                    ?>
                 </ul>
             </div>
 
@@ -51,19 +67,23 @@
 
 $value = isset($_GET['query']) ? $_GET['query'] : "";
 
-$searchQuery = "SELECT * FROM venues WHERE ";
+$searchQuery = "SELECT * FROM `venues` WHERE";
 $wordToBeDisplayed = "";
+
 
 $keywords = explode(' ', $value);
 
 foreach ($keywords as $keyword){
 
-    $searchQuery .= "keywords LIKE '%".$keyword."%' OR ";
+    $searchQuery .= " venue_city LIKE '%".trim($keyword)."%' OR venue_cuisine LIKE '%".trim($keyword)."%' AND ";
     $wordToBeDisplayed .= $keyword.' ';
 }
 
+
+
 $searchQuery = substr($searchQuery, 0, strlen($searchQuery)-4);
 $wordToBeDisplayed = substr($wordToBeDisplayed, 0, strlen($wordToBeDisplayed)-1);
+$searchQuery.=";";
 
 $conn = mysqli_connect("localhost", "root", "", "munchies");
 
@@ -84,19 +104,24 @@ echo '<section class="results">';
 
 if ($result_count > 0){
 
-    // display the header for the display table
-    echo '<table class="search">';
-
     // loop though each of the results from the database and display them to the user
     while ($row = mysqli_fetch_assoc($query)){
-        echo '    <div class="container">
+
+        $name = $row['venue_name'];
+        $description = $row['venue_specialties'];
+        $address = $row['venue_city'] .', ' . $row['venue_street'] . ' ' . $row['venue_postal_code'];
+        print <<< END
+     <div class="container">
         <div class="wrapper">
-            <h2>Restaurant title</h2>
+            <h2 class="prompt-centre">$name</h2>
             <img  />
-            <h3>Description</h3>
-            <p>Indian restaurant located at the following address.</p>
+            <h3 class="prompt-centre">$description</h3>
+            <p class="prompt-centre">$address</p>
         </div>
-    </div>';
+    </div>
+END;
+
+        unset($name, $description, $address);
     }
 
     // end the display of the table

@@ -23,7 +23,7 @@
 
             <div class="nav-links">
                 <div class="brand">
-                    <a href="index.php" class="brand__link"><span class="brand__link__text">Munchies</span></a>
+                    <a href="./../index.php" class="brand__link"><span class="brand__link__text">Munchies</span></a>
                 </div>
                 <ul class="nav-links__list">
                     <li class="nav-links__list__item">
@@ -50,13 +50,13 @@
 
         <?
             $firstName = $_SESSION['username'];
-            echo "<p>Welcome back $firstName!</p>"
+            echo "<h3 class='centred greeting-message'>Welcome back $firstName!</h3>";
         ?>
 
         <div class="options">
-            <h3>Based on your accounts rights you can perform the following actions:</h3>
-            <ul class="actions">
-                <li><a href="./../php/reset-password.php">Reset password.</a></li>
+            <h4 class="centred prompt">Based on your accounts rights you can perform the following actions:</h4>
+            <ul class="actions centred">
+                <li><a href="./../pages/reset-password.php">Reset password.</a></li>
             </ul>
         </div>
     </div>

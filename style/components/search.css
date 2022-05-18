@@ -1,0 +1,13 @@
+.results{
+
+    overflow-y: scroll;
+    -ms-overflow-y: scroll;
+
+    max-height: 300px;
+}
+
+.container{
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
