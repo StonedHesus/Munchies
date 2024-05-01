@@ -8,9 +8,9 @@
 
     <title>Munchies</title>
 
-    <link rel="stylesheet" href="./style/index/index.css" type="text/css">
-    <link rel="stylesheet" href="./style/index/responsive.css" type="text/css">
-    <link rel="stylesheet" href="./style/index/animations.css" type="text/css">
+    <link rel="stylesheet" href="./public/style/index/index.css" type="text/css">
+    <link rel="stylesheet" href="./public/style/index/responsive.css" type="text/css">
+    <link rel="stylesheet" href="./public/style/index/animations.css" type="text/css">
 
     <script src="https://kit.fontawesome.com/3ba5977250.js" crossorigin="anonymous"></script>
 </head>
